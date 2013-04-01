@@ -45,14 +45,14 @@
 <div id="resultTableDiv">
 	<h1>Result</h1>
 	<button id="restart">Restart</button>
-	<div id="setspan">QuestionSet :<span id="questionSet"> <?php echo $setId ?></span></div>
-	<div id="timeSpan">Total Time :<span id="totalTime"> </span> mil.Second</div>
+	<div id="setspan">Question Set : <span id="questionSet"> <?php echo $setId ?></span></div>
+	<div id="timeSpan">Total Time : <span id="totalTime"> </span> Second</div>
 	<table cellpadding="0" cellspacing="0" border="0" class="display" id="resultTable">
 	<thead>
 		<th>Question ID</th>
 		<th>Question</th>
 		<th>Correct?</th>
-		<th>Time Used (mil.Second)</th>
+		<th>Time Used (Second)</th>
 	</thead>
 	<tbody>
 		<?php

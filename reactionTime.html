@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" ></script>
+    <title> Reaction Time Checker </title>
+</head>
+<body>
+<div id="message">The program is to test your reaction Time.</br> When you click Ready.Click ready. </br> When button show again,just click it immediately.</br> Ready? Lets go!!!</div>
+<div id="testTime">testTime</div>
+<div id="timeShown">timeShown</div>
+<div id="resultTime">resultTime</div>
+<div id="ReactionTime" style="background:#98bf21;height:100px;width:100px;position:relative;">ReactionTime</div>
+
+<div id="buttonGroup">
+    <button id="startButton">Ready</button>
+    <button id="testButton" style="width:100%;height:500px;font-size:500%">Click ME NOW!!!!!</button>
+</div>
+
+<script>
+var shownTime;
+var clickTime;
+
+$(document).ready(function(){
+    // Page Load
+    $("#testButton").hide();
+    $("#testTime").hide();
+    $("#timeShown").hide();
+    $("#resultTime").hide();
+    $("#ReactionTime").hide();
+    
+    
+    // Start Button Click
+    // Hide everything and count the time
+    $("#startButton").click(function(){
+        $("#startButton").hide();
+        $("#message").hide();
+         d = new Date();
+         var n = d.getTime();
+         $("#testTime").text("Test start at: "+n+" mil.second");
+        // when random time occur show button
+		var rand = Math.round(Math.random() * (7000 - 500)) + 500;
+		setTimeout(function() {
+			var d = new Date();
+			shownTime = d.getTime();
+			$("#timeShown").text("The button shown at: "+shownTime+" mil.second");
+			$("#testButton").show();
+		}, rand);
+    });
+    
+    $("#testButton").click(function(){
+		
+        $("#testButton").hide();
+        $("#testTime").show();
+
+        d = new Date();
+        clickTime = d.getTime();
+        $("#timeShown").show();
+        $("#resultTime").text("You click the button at: "+clickTime+" mil.second");
+        $("#resultTime").show();    
+		
+		var result = clickTime-shownTime;
+        $("#ReactionTime").text("You reaction time is ...."+result+" mili.Second");
+        $("#ReactionTime").show();
+        $("#ReactionTime").animate({
+            left:'500px',
+            height:'500px',
+            width:'500px'
+        });
+    });
+});
+</script>
+
+</body>
+</html>

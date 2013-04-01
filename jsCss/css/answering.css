@@ -1,0 +1,35 @@
+#buttonGroup button{
+	width:100%;
+	height:500px;
+	font-size:500%;
+	text-align:center;
+}
+
+#buttonGroup input{
+	width:100%;
+	height:500px;
+	font-size:500%;
+	text-align:center;
+}
+
+#times{
+	font-size:1000%;
+	text-align:center;
+}
+
+.notify{
+	font: 500% "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	text-align:center;
+}
+
+body{
+	font: 90% "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+
+#questionSet{
+	font: 120% "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+
+#totalTime{
+	font: 120% "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
